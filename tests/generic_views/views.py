@@ -66,6 +66,12 @@ class AuthorList(generic.ListView):
     queryset = Author.objects.all()
 
 
+class AuthorListGetQueryset(AuthorList):
+    def get_queryset(self):
+        """A get_queryset that doesn't return anything"""
+        pass
+
+
 class BookList(generic.ListView):
     model = Book
 

@@ -132,6 +132,7 @@ urlpatterns = [
     path('list/authors/context_object_name/', views.AuthorList.as_view(context_object_name='author_list')),
     path('list/authors/dupe_context_object_name/', views.AuthorList.as_view(context_object_name='object_list')),
     path('list/authors/invalid/', views.AuthorList.as_view(queryset=None)),
+    path('list/authors/get_queryset/', views.AuthorListGetQueryset.as_view()),
     path(
         'list/authors/paginated/custom_class/',
         views.AuthorList.as_view(paginate_by=5, paginator_class=views.CustomPaginator),
